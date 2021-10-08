@@ -15,7 +15,14 @@
 		2709C9FB27108A0A007501DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2709C9F927108A0A007501DF /* LaunchScreen.storyboard */; };
 		2709CA0627108A0B007501DF /* CakeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2709CA0527108A0B007501DF /* CakeAppTests.swift */; };
 		2709CA1027108A0B007501DF /* CakeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2709CA0F27108A0B007501DF /* CakeAppUITests.swift */; };
-		2709CA1227108A0B007501DF /* CakeAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2709CA1127108A0B007501DF /* CakeAppUITestsLaunchTests.swift */; };
+		2709CA2027108B2B007501DF /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2709CA1F27108B2B007501DF /* Service.swift */; };
+		2709CA2227108B6C007501DF /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2709CA2127108B6C007501DF /* ServiceError.swift */; };
+		2709CA2427108B8D007501DF /* ServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2709CA2327108B8D007501DF /* ServiceClient.swift */; };
+		2709CA2627108BC3007501DF /* JsonDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2709CA2527108BC3007501DF /* JsonDecodable.swift */; };
+		2709CA2827108C22007501DF /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2709CA2727108C22007501DF /* MockService.swift */; };
+		2709CA2C27108C9A007501DF /* CakeSuccessResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 2709CA2B27108C9A007501DF /* CakeSuccessResponse.json */; };
+		2709CA2E27108CCD007501DF /* CakeFailureResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 2709CA2D27108CCD007501DF /* CakeFailureResponse.json */; };
+		2709CA3027108E1E007501DF /* CakeViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2709CA2F27108E1E007501DF /* CakeViewModelTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +55,14 @@
 		2709CA0527108A0B007501DF /* CakeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeAppTests.swift; sourceTree = "<group>"; };
 		2709CA0B27108A0B007501DF /* CakeAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CakeAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2709CA0F27108A0B007501DF /* CakeAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeAppUITests.swift; sourceTree = "<group>"; };
-		2709CA1127108A0B007501DF /* CakeAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2709CA1F27108B2B007501DF /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = SOURCE_ROOT; };
+		2709CA2127108B6C007501DF /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		2709CA2327108B8D007501DF /* ServiceClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceClient.swift; sourceTree = "<group>"; };
+		2709CA2527108BC3007501DF /* JsonDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDecodable.swift; sourceTree = "<group>"; };
+		2709CA2727108C22007501DF /* MockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
+		2709CA2B27108C9A007501DF /* CakeSuccessResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CakeSuccessResponse.json; sourceTree = "<group>"; };
+		2709CA2D27108CCD007501DF /* CakeFailureResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CakeFailureResponse.json; sourceTree = "<group>"; };
+		2709CA2F27108E1E007501DF /* CakeViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeViewModelTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +113,7 @@
 		2709C9ED27108A05007501DF /* CakeApp */ = {
 			isa = PBXGroup;
 			children = (
+				2709CA1E27108B0A007501DF /* Networking */,
 				2709C9EE27108A05007501DF /* AppDelegate.swift */,
 				2709C9F027108A05007501DF /* SceneDelegate.swift */,
 				2709C9F227108A05007501DF /* ViewController.swift */,
@@ -114,6 +129,10 @@
 			isa = PBXGroup;
 			children = (
 				2709CA0527108A0B007501DF /* CakeAppTests.swift */,
+				2709CA2727108C22007501DF /* MockService.swift */,
+				2709CA2B27108C9A007501DF /* CakeSuccessResponse.json */,
+				2709CA2D27108CCD007501DF /* CakeFailureResponse.json */,
+				2709CA2F27108E1E007501DF /* CakeViewModelTest.swift */,
 			);
 			path = CakeAppTests;
 			sourceTree = "<group>";
@@ -122,9 +141,19 @@
 			isa = PBXGroup;
 			children = (
 				2709CA0F27108A0B007501DF /* CakeAppUITests.swift */,
-				2709CA1127108A0B007501DF /* CakeAppUITestsLaunchTests.swift */,
 			);
 			path = CakeAppUITests;
+			sourceTree = "<group>";
+		};
+		2709CA1E27108B0A007501DF /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2709CA1F27108B2B007501DF /* Service.swift */,
+				2709CA2127108B6C007501DF /* ServiceError.swift */,
+				2709CA2327108B8D007501DF /* ServiceClient.swift */,
+				2709CA2527108BC3007501DF /* JsonDecodable.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +270,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2709CA2C27108C9A007501DF /* CakeSuccessResponse.json in Resources */,
+				2709CA2E27108CCD007501DF /* CakeFailureResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,8 +289,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2709CA2227108B6C007501DF /* ServiceError.swift in Sources */,
 				2709C9F327108A05007501DF /* ViewController.swift in Sources */,
+				2709CA2027108B2B007501DF /* Service.swift in Sources */,
+				2709CA2627108BC3007501DF /* JsonDecodable.swift in Sources */,
 				2709C9EF27108A05007501DF /* AppDelegate.swift in Sources */,
+				2709CA2427108B8D007501DF /* ServiceClient.swift in Sources */,
 				2709C9F127108A05007501DF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +304,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2709CA0627108A0B007501DF /* CakeAppTests.swift in Sources */,
+				2709CA3027108E1E007501DF /* CakeViewModelTest.swift in Sources */,
+				2709CA2827108C22007501DF /* MockService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +313,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2709CA1227108A0B007501DF /* CakeAppUITestsLaunchTests.swift in Sources */,
 				2709CA1027108A0B007501DF /* CakeAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
