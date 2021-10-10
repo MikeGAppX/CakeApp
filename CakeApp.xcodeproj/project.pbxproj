@@ -30,6 +30,10 @@
 		2709CA4B271364F3007501DF /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2709CA4A271364F3007501DF /* EndPoints.swift */; };
 		2709CA4D27136527007501DF /* ServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2709CA4C27136527007501DF /* ServiceImpl.swift */; };
 		2709CA5027136559007501DF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2709CA4F27136559007501DF /* Constants.swift */; };
+		2709CA54271379F9007501DF /* CakeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2709CA53271379F9007501DF /* CakeListViewModel.swift */; };
+		2709CA5627137A83007501DF /* CakeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2709CA5527137A83007501DF /* CakeListViewController.swift */; };
+		2709CA5827137ABE007501DF /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2709CA5727137ABE007501DF /* MainCoordinator.swift */; };
+		2709CA5A27137BF3007501DF /* CakeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2709CA5927137BF3007501DF /* CakeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +81,10 @@
 		2709CA4A271364F3007501DF /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
 		2709CA4C27136527007501DF /* ServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceImpl.swift; sourceTree = "<group>"; };
 		2709CA4F27136559007501DF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2709CA53271379F9007501DF /* CakeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeListViewModel.swift; sourceTree = "<group>"; };
+		2709CA5527137A83007501DF /* CakeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeListViewController.swift; sourceTree = "<group>"; };
+		2709CA5727137ABE007501DF /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		2709CA5927137BF3007501DF /* CakeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +190,7 @@
 		2709CA362712FFCC007501DF /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				2709CA5727137ABE007501DF /* MainCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -189,6 +198,7 @@
 		2709CA3927130016007501DF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2709CA53271379F9007501DF /* CakeListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -197,6 +207,8 @@
 			isa = PBXGroup;
 			children = (
 				2709C9F427108A05007501DF /* Main.storyboard */,
+				2709CA5527137A83007501DF /* CakeListViewController.swift */,
+				2709CA5927137BF3007501DF /* CakeTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -350,16 +362,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2709CA5827137ABE007501DF /* MainCoordinator.swift in Sources */,
 				2709CA2227108B6C007501DF /* ServiceError.swift in Sources */,
+				2709CA54271379F9007501DF /* CakeListViewModel.swift in Sources */,
 				2709C9F327108A05007501DF /* ViewController.swift in Sources */,
 				2709CA47271313D0007501DF /* ImageLoader.swift in Sources */,
 				2709CA2027108B2B007501DF /* Service.swift in Sources */,
 				2709CA45271303CA007501DF /* ImageCache.swift in Sources */,
+				2709CA5627137A83007501DF /* CakeListViewController.swift in Sources */,
 				2709CA4327130144007501DF /* Cake.swift in Sources */,
 				2709CA2627108BC3007501DF /* JsonDecodable.swift in Sources */,
 				2709CA4D27136527007501DF /* ServiceImpl.swift in Sources */,
 				2709C9EF27108A05007501DF /* AppDelegate.swift in Sources */,
 				2709CA2427108B8D007501DF /* ServiceClient.swift in Sources */,
+				2709CA5A27137BF3007501DF /* CakeTableViewCell.swift in Sources */,
 				2709CA49271364D2007501DF /* URLRequest+Extension.swift in Sources */,
 				2709CA5027136559007501DF /* Constants.swift in Sources */,
 				2709CA4B271364F3007501DF /* EndPoints.swift in Sources */,
