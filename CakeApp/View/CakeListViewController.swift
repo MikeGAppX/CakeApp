@@ -29,9 +29,6 @@ class CakeListViewController: UIViewController {
     }
     
 }
-
-//MARK: - Exts
-
 extension CakeListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
@@ -49,11 +46,12 @@ extension CakeListViewController: UITableViewDataSource {
 }
 extension CakeListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+        let cake = viewModel.getCakes(for: indexPath.row)
+        coordinator?.goToCakeDetails(cakeDetails: cake)
+        
     }
     
 }
-
 extension CakeListViewController: CakeListViewType {
     func updateUI() {
         tableView.reloadData()
