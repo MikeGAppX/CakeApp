@@ -26,6 +26,10 @@
 		2709CA4327130144007501DF /* Cake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2709CA4227130144007501DF /* Cake.swift */; };
 		2709CA45271303CA007501DF /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2709CA44271303CA007501DF /* ImageCache.swift */; };
 		2709CA47271313D0007501DF /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2709CA46271313D0007501DF /* ImageLoader.swift */; };
+		2709CA49271364D2007501DF /* URLRequest+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2709CA48271364D2007501DF /* URLRequest+Extension.swift */; };
+		2709CA4B271364F3007501DF /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2709CA4A271364F3007501DF /* EndPoints.swift */; };
+		2709CA4D27136527007501DF /* ServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2709CA4C27136527007501DF /* ServiceImpl.swift */; };
+		2709CA5027136559007501DF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2709CA4F27136559007501DF /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +73,10 @@
 		2709CA4227130144007501DF /* Cake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cake.swift; sourceTree = "<group>"; };
 		2709CA44271303CA007501DF /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		2709CA46271313D0007501DF /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		2709CA48271364D2007501DF /* URLRequest+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extension.swift"; sourceTree = "<group>"; };
+		2709CA4A271364F3007501DF /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		2709CA4C27136527007501DF /* ServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceImpl.swift; sourceTree = "<group>"; };
+		2709CA4F27136559007501DF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +127,7 @@
 		2709C9ED27108A05007501DF /* CakeApp */ = {
 			isa = PBXGroup;
 			children = (
+				2709CA4E27136548007501DF /* Utility */,
 				2709CA412713012F007501DF /* Model */,
 				2709CA40271300B8007501DF /* View */,
 				2709CA3927130016007501DF /* ViewModel */,
@@ -164,6 +173,9 @@
 				2709CA2527108BC3007501DF /* JsonDecodable.swift */,
 				2709CA44271303CA007501DF /* ImageCache.swift */,
 				2709CA46271313D0007501DF /* ImageLoader.swift */,
+				2709CA48271364D2007501DF /* URLRequest+Extension.swift */,
+				2709CA4A271364F3007501DF /* EndPoints.swift */,
+				2709CA4C27136527007501DF /* ServiceImpl.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -195,6 +207,14 @@
 				2709CA4227130144007501DF /* Cake.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		2709CA4E27136548007501DF /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				2709CA4F27136559007501DF /* Constants.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,8 +357,12 @@
 				2709CA45271303CA007501DF /* ImageCache.swift in Sources */,
 				2709CA4327130144007501DF /* Cake.swift in Sources */,
 				2709CA2627108BC3007501DF /* JsonDecodable.swift in Sources */,
+				2709CA4D27136527007501DF /* ServiceImpl.swift in Sources */,
 				2709C9EF27108A05007501DF /* AppDelegate.swift in Sources */,
 				2709CA2427108B8D007501DF /* ServiceClient.swift in Sources */,
+				2709CA49271364D2007501DF /* URLRequest+Extension.swift in Sources */,
+				2709CA5027136559007501DF /* Constants.swift in Sources */,
+				2709CA4B271364F3007501DF /* EndPoints.swift in Sources */,
 				2709C9F127108A05007501DF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
