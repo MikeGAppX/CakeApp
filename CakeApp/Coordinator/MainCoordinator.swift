@@ -10,9 +10,8 @@ import UIKit
 protocol Coordinator:AnyObject {
     var navigationController: UINavigationController { get set }
     func start()
-    
+    func goToCakeDetails(cakeDetails: CakeDetails)
 }
-
 
 class MainCoordinator: Coordinator {
     
@@ -27,10 +26,20 @@ class MainCoordinator: Coordinator {
             return
         }
         vc.coordinator = self
-        vc.viewModel = CakeListViewModel(delegate:vc as! CakeListViewType)
+        vc.viewModel = CakeListViewModel(delegate:vc)
         navigationController.pushViewController(vc, animated: false)
     }
     
-    
+    func goToCakeDetails(cakeDetails: CakeDetails) {
+        let vm =  CakeDetailsViewModel(cakeDetails: cakeDetails)
+        let viewController = UIStoryboard(name:"Main", bundle: nil).instantiateViewController(
+            identifier: "CakeDetailViewController",
+            creator: { coder in
+                CakeDetailViewController(viewModel: vm, coder: coder)
+            }
+        )
+        
+        navigationController.pushViewController(viewController, animated: false)
+    }
     
 }
